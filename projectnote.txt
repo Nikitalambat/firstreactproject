@@ -1,0 +1,14 @@
+terminal commands at ur project folder:
+git init
+git remote add origin https://github.com/Nikitalambat/firstreactproject.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+git pull origin master
+git push origin master
+
+
+
+================================================
+npx create-react-app firstreactproject
+
