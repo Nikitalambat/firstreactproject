@@ -36,6 +36,6 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-    title: 'Nitika TextUtils',
+    title: 'Set title here',
     aboutText: 'About TextUtils'
 };
