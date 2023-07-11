@@ -22,7 +22,7 @@ export default function TextForm(props) {
   
 
   // Declare a new state variable, which we'll call "text"  
-  const [text, setText] = useState('Enter text here2');
+  const [text, setText] = useState(''); //useState('Enter text here2');
   //text = "new text";  //wrong way to change the state
   //setTest("new text"); //Correct way to change the state
   
