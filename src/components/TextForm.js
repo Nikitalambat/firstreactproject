@@ -9,22 +9,24 @@ export default function TextForm(props) {
   }
 
   const handleLoClick = () =>{
-    // console.log("LowerCase was clicked: " + text);
-    // setText("You have clicked on handleLoClick");
     let newText = text.toLowerCase();
     setText(newText);
   }
+  
+  const handleClearClick = () =>{
+    let newText = '';
+    setText(newText);
+  } 
 
   const handleUpChange = (event) =>{
-    // console.log("On change");
     setText(event.target.value);
   }  
-  
+     
 
   // Declare a new state variable, which we'll call "text"  
   const [text, setText] = useState(''); //useState('Enter text here2');
   //text = "new text";  //wrong way to change the state
-  //setTest("new text"); //Correct way to change the state
+  //setTest("new text"); //Correct way to change the state 
   
   return (
     <>
@@ -34,7 +36,8 @@ export default function TextForm(props) {
           <textarea className="form-control" value={text} onChange={handleUpChange} id="myBox" rows="8"></textarea>
       </div>
       <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to UpperCase</button>
-      <button className="btn btn-primary" onClick={handleLoClick}>Convert to LowerCase</button>
+      <button className="btn btn-primary mx-2" onClick={handleLoClick}>Convert to LowerCase</button>
+      <button className="btn btn-primary" onClick={handleClearClick}>Clear Text</button>
     </div>
     <div className="container my-3">
       <h1>Your text summary</h1>
