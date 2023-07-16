@@ -41,10 +41,10 @@ export default function TextForm(props) {
   
   return (
     <>
-    <div className="container">
+    <div className="container"  style={{color:props.mode==='dark'?'white':'dark'}}>
       <h3>{props.heading}</h3>
-      <div class="mb-3">
-          <textarea className="form-control" value={text} onChange={handleUpChange} id="myBox" rows="8"></textarea>
+      <div className="mb-3">
+          <textarea className="form-control" value={text} onChange={handleUpChange} style={{backgroundColor:props.mode==='dark'?'grey':'white', color:props.mode==='dark'?'white':'dark'}} id="myBox" rows="8"></textarea>
       </div>
       <button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to UpperCase</button>
       <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to LowerCase</button>
@@ -52,7 +52,7 @@ export default function TextForm(props) {
       <button className="btn btn-primary mx-1" onClick={handleCopyClick}>Copy Text</button>
       <button className="btn btn-primary mx-1" onClick={handleRemoveExtraSpaceClick}>Remove Extra Space</button>
     </div>
-    <div className="container my-3">
+    <div className="container my-3" style={{color:props.mode==='dark'?'white':'dark'}}>
       <h1>Your text summary</h1>
       <p>{text.split(" ").length} words and {text.length} characters</p>
       <p>{0.008 * text.split(" ").length} Minutes read</p>
